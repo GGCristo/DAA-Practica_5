@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/m_clasico.hpp
+multiplicacion_interfaz.hpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/multiplicacion_interfaz.hpp
+
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/multiplicacion_interfaz.hpp
+iostream
+-
+vector
+-
+
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
+iostream
+-
+memory
+-
+vector
+-
+multiplicacion_interfaz.hpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/multiplicacion_interfaz.hpp
+
+/home/cristo/Desktop/DAA/DAA-Practica_5/src/main.cpp
+iostream
+-
+vector
+-
+../include/polinomio.hpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
+
+/home/cristo/Desktop/DAA/DAA-Practica_5/src/polinomio.cpp
+../include/polinomio.hpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
+../include/m_clasico.hpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/m_clasico.hpp
+
