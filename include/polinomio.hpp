@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cmath>
 #include <iostream>
 #include <memory>
 #include <vector>
@@ -21,10 +22,14 @@ class Polinomio {
       std::vector<Monomio>,
       std::shared_ptr<MultiplicacionInterfaz> algoritmo = nullptr);
   Polinomio multiplicar(const Polinomio&);
-  // size_t get_sz() const;
-  // void insert(Monomio);
+
+  Polinomio getDerecha() const;
+  Polinomio getIzquierda() const;
+  size_t getGrado() const;
+  size_t get_sz() const;
+  void insert(Monomio);
   void setMultiplicar();
-  // Monomio& operator[](unsigned int) const;
+  const Monomio& operator[](unsigned int) const;
   std::ostream& show(std::ostream& os = std::cout);
 
  private:

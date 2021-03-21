@@ -6,6 +6,11 @@
 },
 {
   "directory": "/home/cristo/Desktop/DAA/DAA-Practica_5/build/src",
+  "command": "/usr/bin/c++      -o CMakeFiles/main.dir/m_dyv.cpp.o -c /home/cristo/Desktop/DAA/DAA-Practica_5/src/m_dyv.cpp",
+  "file": "/home/cristo/Desktop/DAA/DAA-Practica_5/src/m_dyv.cpp"
+},
+{
+  "directory": "/home/cristo/Desktop/DAA/DAA-Practica_5/build/src",
   "command": "/usr/bin/c++      -o CMakeFiles/main.dir/main.cpp.o -c /home/cristo/Desktop/DAA/DAA-Practica_5/src/main.cpp",
   "file": "/home/cristo/Desktop/DAA/DAA-Practica_5/src/main.cpp"
 },

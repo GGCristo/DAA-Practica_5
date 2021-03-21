@@ -12,6 +12,12 @@ multiplicacion_interfaz.hpp
 polinomio.hpp
 /home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
 
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/m_dyv.hpp
+multiplicacion_interfaz.hpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/multiplicacion_interfaz.hpp
+polinomio.hpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
+
 /home/cristo/Desktop/DAA/DAA-Practica_5/include/monomio.hpp
 iostream
 -
@@ -21,10 +27,10 @@ iostream
 -
 vector
 -
-monomio.hpp
-/home/cristo/Desktop/DAA/DAA-Practica_5/include/monomio.hpp
 
 /home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
+cmath
+-
 iostream
 -
 memory
@@ -36,7 +42,19 @@ monomio.hpp
 multiplicacion_interfaz.hpp
 /home/cristo/Desktop/DAA/DAA-Practica_5/include/multiplicacion_interfaz.hpp
 
-/home/cristo/Desktop/DAA/DAA-Practica_5/src/m_clasico.cpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/src/m_dyv.cpp
+../include/m_dyv.hpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/m_dyv.hpp
+
+/home/cristo/Desktop/DAA/DAA-Practica_5/src/main.cpp
+iostream
+-
+vector
+-
 ../include/m_clasico.hpp
 /home/cristo/Desktop/DAA/DAA-Practica_5/include/m_clasico.hpp
+../include/m_dyv.hpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/m_dyv.hpp
+../include/polinomio.hpp
+/home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
 

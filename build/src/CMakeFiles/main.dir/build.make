@@ -70,9 +70,22 @@ src/CMakeFiles/main.dir/m_clasico.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/m_clasico.cpp.s"
 	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cristo/Desktop/DAA/DAA-Practica_5/src/m_clasico.cpp -o CMakeFiles/main.dir/m_clasico.cpp.s
 
+src/CMakeFiles/main.dir/m_dyv.cpp.o: src/CMakeFiles/main.dir/flags.make
+src/CMakeFiles/main.dir/m_dyv.cpp.o: ../src/m_dyv.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cristo/Desktop/DAA/DAA-Practica_5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/main.dir/m_dyv.cpp.o"
+	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/m_dyv.cpp.o -c /home/cristo/Desktop/DAA/DAA-Practica_5/src/m_dyv.cpp
+
+src/CMakeFiles/main.dir/m_dyv.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/m_dyv.cpp.i"
+	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cristo/Desktop/DAA/DAA-Practica_5/src/m_dyv.cpp > CMakeFiles/main.dir/m_dyv.cpp.i
+
+src/CMakeFiles/main.dir/m_dyv.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/m_dyv.cpp.s"
+	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cristo/Desktop/DAA/DAA-Practica_5/src/m_dyv.cpp -o CMakeFiles/main.dir/m_dyv.cpp.s
+
 src/CMakeFiles/main.dir/main.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cristo/Desktop/DAA/DAA-Practica_5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/main.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cristo/Desktop/DAA/DAA-Practica_5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/main.dir/main.cpp.o"
 	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/cristo/Desktop/DAA/DAA-Practica_5/src/main.cpp
 
 src/CMakeFiles/main.dir/main.cpp.i: cmake_force
@@ -85,7 +98,7 @@ src/CMakeFiles/main.dir/main.cpp.s: cmake_force
 
 src/CMakeFiles/main.dir/monomio.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/monomio.cpp.o: ../src/monomio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cristo/Desktop/DAA/DAA-Practica_5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/main.dir/monomio.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cristo/Desktop/DAA/DAA-Practica_5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/main.dir/monomio.cpp.o"
 	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/monomio.cpp.o -c /home/cristo/Desktop/DAA/DAA-Practica_5/src/monomio.cpp
 
 src/CMakeFiles/main.dir/monomio.cpp.i: cmake_force
@@ -98,7 +111,7 @@ src/CMakeFiles/main.dir/monomio.cpp.s: cmake_force
 
 src/CMakeFiles/main.dir/polinomio.cpp.o: src/CMakeFiles/main.dir/flags.make
 src/CMakeFiles/main.dir/polinomio.cpp.o: ../src/polinomio.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cristo/Desktop/DAA/DAA-Practica_5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/main.dir/polinomio.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cristo/Desktop/DAA/DAA-Practica_5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/main.dir/polinomio.cpp.o"
 	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/polinomio.cpp.o -c /home/cristo/Desktop/DAA/DAA-Practica_5/src/polinomio.cpp
 
 src/CMakeFiles/main.dir/polinomio.cpp.i: cmake_force
@@ -112,6 +125,7 @@ src/CMakeFiles/main.dir/polinomio.cpp.s: cmake_force
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/m_clasico.cpp.o" \
+"CMakeFiles/main.dir/m_dyv.cpp.o" \
 "CMakeFiles/main.dir/main.cpp.o" \
 "CMakeFiles/main.dir/monomio.cpp.o" \
 "CMakeFiles/main.dir/polinomio.cpp.o"
@@ -120,12 +134,13 @@ main_OBJECTS = \
 main_EXTERNAL_OBJECTS =
 
 ../bin/main: src/CMakeFiles/main.dir/m_clasico.cpp.o
+../bin/main: src/CMakeFiles/main.dir/m_dyv.cpp.o
 ../bin/main: src/CMakeFiles/main.dir/main.cpp.o
 ../bin/main: src/CMakeFiles/main.dir/monomio.cpp.o
 ../bin/main: src/CMakeFiles/main.dir/polinomio.cpp.o
 ../bin/main: src/CMakeFiles/main.dir/build.make
 ../bin/main: src/CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cristo/Desktop/DAA/DAA-Practica_5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../../bin/main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cristo/Desktop/DAA/DAA-Practica_5/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ../../bin/main"
 	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

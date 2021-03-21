@@ -23,18 +23,35 @@ Polinomio::Polinomio(const std::vector<Monomio> polinomio,
                      std::shared_ptr<MultiplicacionInterfaz> algoritmo) {
   polinomio_ = polinomio;
   multiplicar_ = algoritmo;
+  terminos_ = polinomio.size();
+  grado_ = polinomio[0].getExponente();
 }
 
-// void Polinomio::insert(Monomio monomio) { polinomio_.push_back(monomio); }
+Polinomio Polinomio::getDerecha() const {
+  auto mitad = polinomio_.begin() + round(polinomio_.size() / 2.0) - 1;
+  return Polinomio(polinomio_t(mitad + 1, polinomio_.end()));
+}
 
-// size_t Polinomio::get_sz() const { return polinomio_.size(); }
+Polinomio Polinomio::getIzquierda() const {
+  auto mitad = polinomio_.begin() + round(polinomio_.size() / 2.0) - 1;
+  return Polinomio(polinomio_t(polinomio_.begin(), mitad + 1));
+}
+
+const Monomio& Polinomio::operator[](unsigned int index) const {
+  return polinomio_[index];
+}
+
+void Polinomio::insert(Monomio monomio) { polinomio_.push_back(monomio); }
+
+size_t Polinomio::getGrado() const { return grado_; }
+
+size_t Polinomio::get_sz() const { return polinomio_.size(); }
 
 Polinomio Polinomio::multiplicar(const Polinomio& polinomio2) {
   if (!multiplicar_) {
     setMultiplicar();
   }
-  return Polinomio(
-      multiplicar_->multiplicacion(this->polinomio_, polinomio2.polinomio_));
+  return multiplicar_->multiplicacion(*this, polinomio2);
 }
 
 void Polinomio::setMultiplicar() {

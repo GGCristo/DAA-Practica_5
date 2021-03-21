@@ -1,12 +1,13 @@
 #pragma once
+
 #include "multiplicacion_interfaz.hpp"
 #include "polinomio.hpp"
 
 typedef std::vector<Monomio> polinomio_t;
 
-class MClasico : public MultiplicacionInterfaz {
+class MDyV : public MultiplicacionInterfaz {
  public:
-  MClasico(){};
-  ~MClasico(){};
+  MDyV(){};
+  ~MDyV(){};
   Polinomio multiplicacion(const Polinomio&, const Polinomio&) override;
 };

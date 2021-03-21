@@ -152,6 +152,33 @@ m_clasico.cpp.s:
 	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/m_clasico.cpp.s
 .PHONY : m_clasico.cpp.s
 
+m_dyv.o: m_dyv.cpp.o
+
+.PHONY : m_dyv.o
+
+# target to build an object file
+m_dyv.cpp.o:
+	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/m_dyv.cpp.o
+.PHONY : m_dyv.cpp.o
+
+m_dyv.i: m_dyv.cpp.i
+
+.PHONY : m_dyv.i
+
+# target to preprocess a source file
+m_dyv.cpp.i:
+	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/m_dyv.cpp.i
+.PHONY : m_dyv.cpp.i
+
+m_dyv.s: m_dyv.cpp.s
+
+.PHONY : m_dyv.s
+
+# target to generate assembly for a file
+m_dyv.cpp.s:
+	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/m_dyv.cpp.s
+.PHONY : m_dyv.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -245,6 +272,9 @@ help:
 	@echo "... m_clasico.o"
 	@echo "... m_clasico.i"
 	@echo "... m_clasico.s"
+	@echo "... m_dyv.o"
+	@echo "... m_dyv.i"
+	@echo "... m_dyv.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

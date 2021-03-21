@@ -19,7 +19,14 @@ int Monomio::getExponente() const { return exponente_; }
 void Monomio::setCoeficiente(int c) { coeficiente_ = c; }
 
 // Operadores de insercion y extraccion
-std::ostream &operator<<(std::ostream &nout, const Monomio &s) {}
+std::ostream &operator<<(std::ostream &nout, const Monomio &s) {
+  if (s.getExponente() == 0) {
+    nout << s.getCoeficiente();
+  } else {
+    nout << s.getCoeficiente() << "x^" << s.getExponente();
+  }
+  return nout;
+}
 std::istream &operator>>(const std::istream &sin, Monomio &r) {}
 
 // Suma dos monomios de mismo exponente

@@ -7,8 +7,15 @@ src/CMakeFiles/main.dir/m_clasico.cpp.o
  /home/cristo/Desktop/DAA/DAA-Practica_5/include/multiplicacion_interfaz.hpp
  /home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
  /home/cristo/Desktop/DAA/DAA-Practica_5/src/m_clasico.cpp
+src/CMakeFiles/main.dir/m_dyv.cpp.o
+ /home/cristo/Desktop/DAA/DAA-Practica_5/include/m_dyv.hpp
+ /home/cristo/Desktop/DAA/DAA-Practica_5/include/monomio.hpp
+ /home/cristo/Desktop/DAA/DAA-Practica_5/include/multiplicacion_interfaz.hpp
+ /home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
+ /home/cristo/Desktop/DAA/DAA-Practica_5/src/m_dyv.cpp
 src/CMakeFiles/main.dir/main.cpp.o
  /home/cristo/Desktop/DAA/DAA-Practica_5/include/m_clasico.hpp
+ /home/cristo/Desktop/DAA/DAA-Practica_5/include/m_dyv.hpp
  /home/cristo/Desktop/DAA/DAA-Practica_5/include/monomio.hpp
  /home/cristo/Desktop/DAA/DAA-Practica_5/include/multiplicacion_interfaz.hpp
  /home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp

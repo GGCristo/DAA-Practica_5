@@ -7,7 +7,14 @@ src/CMakeFiles/main.dir/m_clasico.cpp.o: ../include/multiplicacion_interfaz.hpp
 src/CMakeFiles/main.dir/m_clasico.cpp.o: ../include/polinomio.hpp
 src/CMakeFiles/main.dir/m_clasico.cpp.o: ../src/m_clasico.cpp
 
+src/CMakeFiles/main.dir/m_dyv.cpp.o: ../include/m_dyv.hpp
+src/CMakeFiles/main.dir/m_dyv.cpp.o: ../include/monomio.hpp
+src/CMakeFiles/main.dir/m_dyv.cpp.o: ../include/multiplicacion_interfaz.hpp
+src/CMakeFiles/main.dir/m_dyv.cpp.o: ../include/polinomio.hpp
+src/CMakeFiles/main.dir/m_dyv.cpp.o: ../src/m_dyv.cpp
+
 src/CMakeFiles/main.dir/main.cpp.o: ../include/m_clasico.hpp
+src/CMakeFiles/main.dir/main.cpp.o: ../include/m_dyv.hpp
 src/CMakeFiles/main.dir/main.cpp.o: ../include/monomio.hpp
 src/CMakeFiles/main.dir/main.cpp.o: ../include/multiplicacion_interfaz.hpp
 src/CMakeFiles/main.dir/main.cpp.o: ../include/polinomio.hpp

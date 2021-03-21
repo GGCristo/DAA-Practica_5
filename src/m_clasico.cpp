@@ -1,16 +1,16 @@
 #include "../include/m_clasico.hpp"
 
-monomio_t MClasico::multiplicacion(const monomio_t& polinomio1,
-                                   const monomio_t& polinomio2) {
-  monomio_t resultado;
-  int N = (polinomio1.size() > polinomio2.size() ? polinomio1.size()
-                                                 : polinomio2.size());
+Polinomio MClasico::multiplicacion(const Polinomio& polinomio1,
+                                   const Polinomio& polinomio2) {
+  polinomio_t resultado;
+  int N = (polinomio1.get_sz() > polinomio2.get_sz() ? polinomio1.get_sz()
+                                                     : polinomio2.get_sz());
   std::cout << '\n';
   for (size_t i = 0; i < 2 * N - 2; ++i) {
     int coeficiente = 0;
     int exponente = 0;
     for (size_t j = 0; j <= i; ++j) {
-      if (j < polinomio1.size() && (i - j) < polinomio2.size()) {
+      if (j < polinomio1.get_sz() && (i - j) < polinomio2.get_sz()) {
         coeficiente +=
             polinomio1[j].getCoeficiente() * polinomio2[i - j].getCoeficiente();
         exponente =
@@ -26,5 +26,5 @@ monomio_t MClasico::multiplicacion(const monomio_t& polinomio1,
   }
   std::cout << '\n';
   */
-  return resultado;
+  return Polinomio(resultado);
 }
