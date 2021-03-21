@@ -1,0 +1,5 @@
+/home/cristo/Desktop/DAA/DAA-Practica_5/Debug/CMakeFiles/rebuild_cache.dir
+/home/cristo/Desktop/DAA/DAA-Practica_5/Debug/CMakeFiles/edit_cache.dir
+/home/cristo/Desktop/DAA/DAA-Practica_5/Debug/src/CMakeFiles/rebuild_cache.dir
+/home/cristo/Desktop/DAA/DAA-Practica_5/Debug/src/CMakeFiles/edit_cache.dir
+/home/cristo/Desktop/DAA/DAA-Practica_5/Debug/src/CMakeFiles/main.dir

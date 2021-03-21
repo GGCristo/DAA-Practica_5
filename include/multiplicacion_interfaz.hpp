@@ -2,9 +2,10 @@
 #include <iostream>
 #include <vector>
 
+#include "monomio.hpp"
 class MultiplicacionInterfaz {
  public:
   virtual ~MultiplicacionInterfaz(){};
-  virtual std::vector<int> multiplicacion(const std::vector<int>&,
-                                          const std::vector<int>&) = 0;
+  virtual std::vector<Monomio> multiplicacion(const std::vector<Monomio>&,
+                                              const std::vector<Monomio>&) = 0;
 };

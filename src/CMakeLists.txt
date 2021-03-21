@@ -2,8 +2,11 @@ cmake_minimum_required(VERSION "3.9.2")
 
 project(RAM)
 
-file(GLOB SOURCES ./*.cpp)
-
+file(GLOB SOURCES *.cpp)
+##set(SOURCES
+##  m_clasico.cpp
+##  polinomio.cpp
+##)
 # set(CMAKE_CXX_FLAGS "-O2")
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)

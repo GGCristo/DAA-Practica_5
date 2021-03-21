@@ -11,6 +11,11 @@
 },
 {
   "directory": "/home/cristo/Desktop/DAA/DAA-Practica_5/build/src",
+  "command": "/usr/bin/c++      -o CMakeFiles/main.dir/monomio.cpp.o -c /home/cristo/Desktop/DAA/DAA-Practica_5/src/monomio.cpp",
+  "file": "/home/cristo/Desktop/DAA/DAA-Practica_5/src/monomio.cpp"
+},
+{
+  "directory": "/home/cristo/Desktop/DAA/DAA-Practica_5/build/src",
   "command": "/usr/bin/c++      -o CMakeFiles/main.dir/polinomio.cpp.o -c /home/cristo/Desktop/DAA/DAA-Practica_5/src/polinomio.cpp",
   "file": "/home/cristo/Desktop/DAA/DAA-Practica_5/src/polinomio.cpp"
 }

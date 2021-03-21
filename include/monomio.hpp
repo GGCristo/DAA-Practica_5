@@ -7,12 +7,13 @@ class Monomio {
   Monomio();                   // Constructor por defecto
   Monomio(int coef, int exp);  // Constructor con Coeficiente y Exponente
   int Evaluar(int x) const;    // Evalua un monomio en un punto
-  int getCoeficiente() const;  // Devuelve el Exponente
+  int getCoeficiente() const;  // Devuelve el Coeficiente
+  int getExponente() const;    // Devuelve el Exponente
   void setCoeficiente(int c);  // Asigna un valor al Coeficiente
   void setExponente(int e);    // Asigna un valor al Exponente
  private:
-  int Coeficiente;
-  int Exponente;
+  int coeficiente_;
+  int exponente_;
 };
 
 // Operadores de insercion y extraccion

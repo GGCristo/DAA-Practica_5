@@ -179,6 +179,33 @@ main.cpp.s:
 	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+monomio.o: monomio.cpp.o
+
+.PHONY : monomio.o
+
+# target to build an object file
+monomio.cpp.o:
+	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/monomio.cpp.o
+.PHONY : monomio.cpp.o
+
+monomio.i: monomio.cpp.i
+
+.PHONY : monomio.i
+
+# target to preprocess a source file
+monomio.cpp.i:
+	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/monomio.cpp.i
+.PHONY : monomio.cpp.i
+
+monomio.s: monomio.cpp.s
+
+.PHONY : monomio.s
+
+# target to generate assembly for a file
+monomio.cpp.s:
+	cd /home/cristo/Desktop/DAA/DAA-Practica_5/build && $(MAKE) -f src/CMakeFiles/main.dir/build.make src/CMakeFiles/main.dir/monomio.cpp.s
+.PHONY : monomio.cpp.s
+
 polinomio.o: polinomio.cpp.o
 
 .PHONY : polinomio.o
@@ -221,6 +248,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... monomio.o"
+	@echo "... monomio.i"
+	@echo "... monomio.s"
 	@echo "... polinomio.o"
 	@echo "... polinomio.i"
 	@echo "... polinomio.s"
