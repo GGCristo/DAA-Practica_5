@@ -6,7 +6,7 @@ monomio_t MClasico::multiplicacion(const monomio_t& polinomio1,
   int N = (polinomio1.size() > polinomio2.size() ? polinomio1.size()
                                                  : polinomio2.size());
   std::cout << '\n';
-  for (size_t i = 0; i <= 2 * N - 2; ++i) {
+  for (size_t i = 0; i < 2 * N - 2; ++i) {
     int coeficiente = 0;
     int exponente = 0;
     for (size_t j = 0; j <= i; ++j) {
@@ -19,10 +19,12 @@ monomio_t MClasico::multiplicacion(const monomio_t& polinomio1,
     }
     resultado.push_back(Monomio(coeficiente, exponente));
   }
+  /*
   for (size_t i = 0; i < resultado.size(); ++i) {
     std::cout << resultado[i].getCoeficiente() << " x^"
               << resultado[i].getExponente() << " + ";
   }
   std::cout << '\n';
+  */
   return resultado;
 }

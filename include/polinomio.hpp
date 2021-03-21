@@ -14,13 +14,15 @@ class Polinomio {
   Polinomio() = delete;
   Polinomio(const Polinomio&);
   // constructor con vector de coeficientes
-  Polinomio(std::vector<int>,
-            std::shared_ptr<MultiplicacionInterfaz> algoritmo = nullptr);
-  Polinomio(std::vector<Monomio>,
-            std::shared_ptr<MultiplicacionInterfaz> algoritmo = nullptr);
+  explicit Polinomio(
+      std::vector<int>,
+      std::shared_ptr<MultiplicacionInterfaz> algoritmo = nullptr);
+  explicit Polinomio(
+      std::vector<Monomio>,
+      std::shared_ptr<MultiplicacionInterfaz> algoritmo = nullptr);
   Polinomio multiplicar(const Polinomio&);
-  size_t get_sz() const;
-  void insert(Monomio);
+  // size_t get_sz() const;
+  // void insert(Monomio);
   void setMultiplicar();
   // Monomio& operator[](unsigned int) const;
   std::ostream& show(std::ostream& os = std::cout);

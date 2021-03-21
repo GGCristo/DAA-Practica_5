@@ -9,5 +9,6 @@ int main() {
                        std::make_shared<MClasico>());
   Polinomio polinomio2(std::vector<int>{2, 0, 3, 1, 2});
   auto resultado = polinomio1.multiplicar(polinomio2);
+  resultado.show();
   return 0;
 }

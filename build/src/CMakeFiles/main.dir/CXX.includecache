@@ -40,19 +40,3 @@ multiplicacion_interfaz.hpp
 ../include/m_clasico.hpp
 /home/cristo/Desktop/DAA/DAA-Practica_5/include/m_clasico.hpp
 
-/home/cristo/Desktop/DAA/DAA-Practica_5/src/main.cpp
-iostream
--
-vector
--
-../include/m_clasico.hpp
-/home/cristo/Desktop/DAA/DAA-Practica_5/include/m_clasico.hpp
-../include/polinomio.hpp
-/home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
-
-/home/cristo/Desktop/DAA/DAA-Practica_5/src/polinomio.cpp
-../include/polinomio.hpp
-/home/cristo/Desktop/DAA/DAA-Practica_5/include/polinomio.hpp
-../include/m_clasico.hpp
-/home/cristo/Desktop/DAA/DAA-Practica_5/include/m_clasico.hpp
-
