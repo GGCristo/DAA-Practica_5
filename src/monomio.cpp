@@ -1,3 +1,6 @@
+// This is a personal academic project. Dear PVS-Studio, please check it.
+
+// PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 #include "../include/monomio.hpp"
 
 Monomio::Monomio() {
@@ -18,7 +21,7 @@ int Monomio::getExponente() const { return exponente_; }
 
 // void Monomio::setCoeficiente(int c) { coeficiente_ = c; }
 
-// void Monomio::setExponente(int c) { exponente_ = c; }
+void Monomio::setExponente(int c) { exponente_ = c; }
 
 bool Monomio::operator<(const Monomio &monomio2) {
   return exponente_ > monomio2.getExponente();

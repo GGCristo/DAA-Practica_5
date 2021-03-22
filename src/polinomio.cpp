@@ -1,6 +1,10 @@
+// This is a personal academic project. Dear PVS-Studio, please check it.
+
+// PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 #include "../include/polinomio.hpp"
 
 #include "../include/m_clasico.hpp"
+#include "../include/m_dyv.hpp"
 
 Polinomio::Polinomio(const Polinomio& polinomioD)
     : polinomio_(polinomioD.polinomio_), multiplicar_(polinomioD.multiplicar_) {
@@ -24,7 +28,7 @@ Polinomio::Polinomio(const std::vector<Monomio> polinomioD,
   polinomio_ = polinomioD;
   multiplicar_ = algoritmo;
   terminos_ = polinomioD.size();
-  grado_ = polinomioD[0].getExponente();
+  grado_ = terminos_ - 1;
 }
 
 Polinomio Polinomio::getDerecha() const {
@@ -34,7 +38,12 @@ Polinomio Polinomio::getDerecha() const {
 
 Polinomio Polinomio::getIzquierda() const {
   auto mitad = polinomio_.begin() + round(polinomio_.size() / 2.0) - 1;
-  return Polinomio(polinomio_t(polinomio_.begin(), mitad + 1));
+  polinomio_t resultado;
+  for (auto i = polinomio_.begin(); i <= mitad; ++i) {
+    resultado.push_back(Monomio(i->getCoeficiente(),
+                                i->getExponente() - this->getTerminos() / 2));
+  }
+  return Polinomio(resultado);
 }
 
 Polinomio Polinomio::operator+(const Polinomio& polinomioD) const {
@@ -45,23 +54,23 @@ Polinomio Polinomio::operator+(const Polinomio& polinomioD) const {
          ptr2 != polinomioD.getPolinomio_t().end()) {
     if (ptr1->getExponente() > ptr2->getExponente()) {
       resultado.push_back(*ptr1);
-      ptr1++;
+      ++ptr1;
     } else if (ptr1->getExponente() == ptr2->getExponente()) {
       resultado.push_back(*ptr1 + *ptr2);
-      ptr1++;
-      ptr2++;
+      ++ptr1;
+      ++ptr2;
     } else {
       resultado.push_back(*ptr2);
-      ptr2++;
+      ++ptr2;
     }
   }
   while (ptr1 != polinomio_.end()) {
     resultado.push_back(*ptr1);
-    ptr1++;
+    ++ptr1;
   }
   while (ptr2 != polinomioD.getPolinomio_t().end()) {
     resultado.push_back(*ptr2);
-    ptr2++;
+    ++ptr2;
   }
   return Polinomio(resultado);
 }
@@ -74,23 +83,23 @@ Polinomio Polinomio::operator-(const Polinomio& polinomioD) const {
          ptr2 != polinomioD.getPolinomio_t().end()) {
     if (ptr1->getExponente() > ptr2->getExponente()) {
       resultado.push_back(*ptr1);
-      ptr1++;
+      ++ptr1;
     } else if (ptr1->getExponente() == ptr2->getExponente()) {
       resultado.push_back(*ptr1 - *ptr2);
-      ptr1++;
-      ptr2++;
+      ++ptr1;
+      ++ptr2;
     } else {
       resultado.push_back(*ptr2);
-      ptr2++;
+      ++ptr2;
     }
   }
   while (ptr1 != polinomio_.end()) {
     resultado.push_back(*ptr1);
-    ptr1++;
+    ++ptr1;
   }
   while (ptr2 != polinomioD.getPolinomio_t().end()) {
     resultado.push_back(*ptr2);
-    ptr2++;
+    ++ptr2;
   }
   return Polinomio(resultado);
 }
@@ -102,6 +111,10 @@ const Monomio& Polinomio::operator[](unsigned int index) const {
 const polinomio_t& Polinomio::getPolinomio_t() const { return polinomio_; }
 
 Monomio& Polinomio::operator[](unsigned int index) { return polinomio_[index]; }
+
+size_t Polinomio::getGrado() const { return grado_; }
+
+size_t Polinomio::getTerminos() const { return terminos_; }
 
 size_t Polinomio::get_sz() const { return polinomio_.size(); }
 
@@ -121,6 +134,9 @@ void Polinomio::setMultiplicar() {
     case 0:
       multiplicar_ = std::make_unique<MClasico>();
       break;
+    case 1:
+      multiplicar_ = std::make_unique<MDyV>();
+      break;
     default:
       std::cout << "Esa opción no esta contemplado, eligiendo clásico\n";
       multiplicar_ = std::make_unique<MClasico>();
@@ -128,11 +144,18 @@ void Polinomio::setMultiplicar() {
   }
 }
 
-std::ostream& Polinomio::show(std::ostream& os) {
+void Polinomio::setMultiplicar(
+    std::shared_ptr<MultiplicacionInterfaz> algoritmo) {
+  multiplicar_ = algoritmo;
+}
+
+std::ostream& Polinomio::show(std::ostream& os) const {
   for (size_t i = 0; i < polinomio_.size() - 1; ++i) {
     os << polinomio_[i] << " + ";
   }
-  os << polinomio_[polinomio_.size() - 1];
-  os << '\n';
+  if (polinomio_.size() >= 1) {
+    os << polinomio_[polinomio_.size() - 1];
+    os << '\n';
+  }
   return os;
 }

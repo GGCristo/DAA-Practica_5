@@ -12,7 +12,7 @@ class Monomio {
   int getExponente() const;    // Devuelve el Exponente
   bool operator<(const Monomio &);
   // void setCoeficiente(int c);  // Asigna un valor al Coeficiente
-  // void setExponente(int e);    // Asigna un valor al Exponente
+  void setExponente(int e);  // Asigna un valor al Exponente
  private:
   int coeficiente_;
   int exponente_;

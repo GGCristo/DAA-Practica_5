@@ -29,13 +29,16 @@ class Polinomio {
   Polinomio getDerecha() const;
   Polinomio getIzquierda() const;
   size_t get_sz() const;
+  size_t getGrado() const;
+  size_t getTerminos() const;
   void setMultiplicar();
+  void setMultiplicar(std::shared_ptr<MultiplicacionInterfaz>);
   Polinomio operator+(const Polinomio&) const;
   Polinomio operator-(const Polinomio&) const;
   const Monomio& operator[](unsigned int) const;
   const polinomio_t& getPolinomio_t() const;
   Monomio& operator[](unsigned int);
-  std::ostream& show(std::ostream& os = std::cout);
+  std::ostream& show(std::ostream& os = std::cout) const;
 
  private:
   int grado_;     // Grado del polinomio
