@@ -18,6 +18,11 @@ int Monomio::getExponente() const { return exponente_; }
 
 void Monomio::setCoeficiente(int c) { coeficiente_ = c; }
 
+void Monomio::setExponente(int c) { exponente_ = c; }
+
+bool Monomio::operator<(const Monomio &monomio2) {
+  return exponente_ > monomio2.getExponente();
+}
 // Operadores de insercion y extraccion
 std::ostream &operator<<(std::ostream &nout, const Monomio &s) {
   if (s.getExponente() == 0) {
@@ -30,4 +35,7 @@ std::ostream &operator<<(std::ostream &nout, const Monomio &s) {
 std::istream &operator>>(const std::istream &sin, Monomio &r) {}
 
 // Suma dos monomios de mismo exponente
-Monomio operator+(const Monomio &x, const Monomio &y) {}
+Monomio operator+(const Monomio &x, const Monomio &y) {
+  assert(x.getExponente() == y.getExponente());
+  return Monomio(x.getCoeficiente() + y.getCoeficiente(), y.getExponente());
+}

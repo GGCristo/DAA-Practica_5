@@ -2,29 +2,29 @@
 
 #include "../include/m_clasico.hpp"
 
-Polinomio::Polinomio(const Polinomio& polinomio)
-    : polinomio_(polinomio.polinomio_), multiplicar_(polinomio.multiplicar_) {
-  grado_ = polinomio.grado_;
-  terminos_ = polinomio.terminos_;
+Polinomio::Polinomio(const Polinomio& polinomioD)
+    : polinomio_(polinomioD.polinomio_), multiplicar_(polinomioD.multiplicar_) {
+  grado_ = polinomioD.grado_;
+  terminos_ = polinomioD.terminos_;
 }
 
-Polinomio::Polinomio(std::vector<int> polinomio,
+Polinomio::Polinomio(std::vector<int> polinomioD,
                      std::shared_ptr<MultiplicacionInterfaz> algoritmo) {
-  polinomio_.reserve(polinomio.size());
-  for (size_t i = 0; i < polinomio.size(); ++i) {
-    polinomio_.push_back(Monomio(polinomio[i], polinomio.size() - i - 1));
+  polinomio_.reserve(polinomioD.size());
+  for (size_t i = 0; i < polinomioD.size(); ++i) {
+    polinomio_.push_back(Monomio(polinomioD[i], polinomioD.size() - i - 1));
   }
-  terminos_ = polinomio.size();
+  terminos_ = polinomioD.size();
   grado_ = terminos_ - 1;
   multiplicar_ = algoritmo;
 }
 
-Polinomio::Polinomio(const std::vector<Monomio> polinomio,
+Polinomio::Polinomio(const std::vector<Monomio> polinomioD,
                      std::shared_ptr<MultiplicacionInterfaz> algoritmo) {
-  polinomio_ = polinomio;
+  polinomio_ = polinomioD;
   multiplicar_ = algoritmo;
-  terminos_ = polinomio.size();
-  grado_ = polinomio[0].getExponente();
+  terminos_ = polinomioD.size();
+  grado_ = polinomioD[0].getExponente();
 }
 
 Polinomio Polinomio::getDerecha() const {
@@ -37,9 +37,46 @@ Polinomio Polinomio::getIzquierda() const {
   return Polinomio(polinomio_t(polinomio_.begin(), mitad + 1));
 }
 
+Polinomio Polinomio::operator+(const Polinomio& polinomioD) const {
+  std::vector<Monomio> resultado;
+  auto ptr1 = polinomio_.begin();
+  auto ptr2 = polinomioD.getPolinomio_t().begin();
+  while (ptr1 != polinomio_.end() &&
+         ptr2 != polinomioD.getPolinomio_t().end()) {
+    if (ptr1->getExponente() > ptr2->getExponente()) {
+      resultado.push_back(*ptr1);
+      ptr1++;
+    } else if (ptr1->getExponente() == ptr2->getExponente()) {
+      resultado.push_back(*ptr1 + *ptr2);
+      ptr1++;
+      ptr2++;
+    } else {
+      resultado.push_back(*ptr2);
+      ptr2++;
+    }
+  }
+  while (ptr1 != polinomio_.end()) {
+    resultado.push_back(*ptr1);
+    ptr1++;
+  }
+  while (ptr2 != polinomioD.getPolinomio_t().end()) {
+    resultado.push_back(*ptr2);
+    ptr2++;
+  }
+  return Polinomio(resultado);
+}
+
+bool mySort(const Monomio& monomio1, const Monomio& monomio2) {
+  return monomio1.getExponente() > monomio2.getExponente();
+}
+
 const Monomio& Polinomio::operator[](unsigned int index) const {
   return polinomio_[index];
 }
+
+const polinomio_t& Polinomio::getPolinomio_t() const { return polinomio_; }
+
+Monomio& Polinomio::operator[](unsigned int index) { return polinomio_[index]; }
 
 void Polinomio::insert(Monomio monomio) { polinomio_.push_back(monomio); }
 
@@ -72,10 +109,9 @@ void Polinomio::setMultiplicar() {
 
 std::ostream& Polinomio::show(std::ostream& os) {
   for (size_t i = 0; i < polinomio_.size() - 1; ++i) {
-    os << polinomio_[i].getCoeficiente() << "x^" << polinomio_[i].getExponente()
-       << " + ";
+    os << polinomio_[i] << " + ";
   }
-  os << polinomio_[polinomio_.size() - 1].getCoeficiente();
+  os << polinomio_[polinomio_.size() - 1];
   os << '\n';
   return os;
 }

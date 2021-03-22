@@ -26,5 +26,10 @@ Polinomio MClasico::multiplicacion(const Polinomio& polinomio1,
   }
   std::cout << '\n';
   */
+  if (N == 1) {
+    resultado.push_back(
+        Monomio(polinomio1[0].getCoeficiente() * polinomio2[0].getCoeficiente(),
+                polinomio1[0].getExponente() + polinomio2[0].getExponente()));
+  }
   return Polinomio(resultado);
 }

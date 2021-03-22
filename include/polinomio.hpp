@@ -1,5 +1,6 @@
 #pragma once
 
+#include <algorithm>
 #include <cmath>
 #include <iostream>
 #include <memory>
@@ -7,6 +8,8 @@
 
 #include "monomio.hpp"
 #include "multiplicacion_interfaz.hpp"
+
+typedef std::vector<Monomio> polinomio_t;
 
 class Polinomio {
  public:
@@ -29,7 +32,10 @@ class Polinomio {
   size_t get_sz() const;
   void insert(Monomio);
   void setMultiplicar();
+  Polinomio operator+(const Polinomio&) const;
   const Monomio& operator[](unsigned int) const;
+  const polinomio_t& getPolinomio_t() const;
+  Monomio& operator[](unsigned int);
   std::ostream& show(std::ostream& os = std::cout);
 
  private:
