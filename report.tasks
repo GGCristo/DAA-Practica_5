@@ -1,1 +1,2 @@
 www.viva64.com/en/w	1	err	Help: The documentation for all analyzer warnings is available here: https://www.viva64.com/en/w/.
+/home/cristo/Desktop/DAA/DAA-Practica_5/src/m_clasico.cpp	16	warn	V1026 The 'coeficiente' variable is incremented in the loop. Undefined behavior will occur in case of signed integer overflow.

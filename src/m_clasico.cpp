@@ -20,24 +20,9 @@ Polinomio MClasico::multiplicacion(const Polinomio& polinomio1,
             polinomio1[j].getExponente() + polinomio2[i - j].getExponente();
       }
     }
-    // std::cout << coeficiente << '\n';
-    if (coeficiente != 0) {
-      resultado.push_back(Monomio(coeficiente, exponente));
-    }
+    // if (coeficiente != 0) {
+    resultado.push_back(Monomio(coeficiente, exponente));
+    //}
   }
-  /*
-  for (size_t i = 0; i < resultado.size(); ++i) {
-    std::cout << resultado[i].getCoeficiente() << " x^"
-              << resultado[i].getExponente() << " + ";
-  }
-  std::cout << '\n';
-*/
-  /*
-   if (N == 1) {
-     resultado.push_back(
-         Monomio(polinomio1[0].getCoeficiente() *
-   polinomio2[0].getCoeficiente(), polinomio1[0].getExponente() +
-   polinomio2[0].getExponente()));
-   }*/
   return Polinomio(resultado);
 }

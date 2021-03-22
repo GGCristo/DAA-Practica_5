@@ -8,5 +8,6 @@
 #include "random.hpp"
 
 using Random = effolkronium::random_static;
+void multiplicar(Polinomio&, const Polinomio&);
 void times(size_t, size_t);
 void times();

@@ -22,6 +22,8 @@ class Monomio {
 std::ostream &operator<<(std::ostream &nout, const Monomio &s);
 // std::istream &operator>>(const std::istream &sin, Monomio &r);
 
+Monomio operator*(const Monomio &x, const Monomio &y);
+
 // Suma dos monomios de mismo exponente
 Monomio operator+(const Monomio &x, const Monomio &y);
 // Resta dos monomios de mismo exponente

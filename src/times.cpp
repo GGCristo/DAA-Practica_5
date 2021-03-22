@@ -1,3 +1,6 @@
+// This is a personal academic project. Dear PVS-Studio, please check it.
+
+// PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 #include "../include/times.hpp"
 
 void times(size_t tamano) {
@@ -14,19 +17,16 @@ void times(size_t tamano) {
   // MClásico
   Polinomio polinomio1C(polinomio1, std::make_shared<MClasico>());
   Polinomio polinomio2C(polinomio2);
-  if (tamano < 10) {
-    std::cout << "Primer polinomio:\n";
-    polinomio1C.show();
-    std::cout << "Segundo polinomio:\n";
-    polinomio2C.show();
-  }
+  multiplicar(polinomio1C, polinomio2C);
+  // DyV
+  polinomio1C.setMultiplicar(std::make_shared<MDyV>());
+  multiplicar(polinomio1C, polinomio2C);
+}
+
+void multiplicar(Polinomio& polinomio1C, const Polinomio& polinomio2C) {
   auto t1 = std::chrono::high_resolution_clock::now();
-  Polinomio resultado(polinomio1C.multiplicar(polinomio2C));
+  polinomio1C.multiplicar(polinomio2C);
   auto t2 = std::chrono::high_resolution_clock::now();
-  if (tamano < 10) {
-    std::cout << "Resultado MClasico:\n";
-    resultado.show();
-  }
   std::cout
       << "El algoritmo tardó:\n"
       << std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1).count()
@@ -39,26 +39,6 @@ void times(size_t tamano) {
                  .count() /
              1000000.0
       << " segundos\n";
-  polinomio1C.setMultiplicar(std::make_shared<MDyV>());
-  auto t3 = std::chrono::high_resolution_clock::now();
-  resultado = polinomio1C.multiplicar(polinomio2C);
-  auto t4 = std::chrono::high_resolution_clock::now();
-  if (tamano < 10) {
-    std::cout << "Resultado MDyV:\n";
-    resultado.show();
-  }
-  std::cout
-      << "El algoritmo tardó:\n"
-      << std::chrono::duration_cast<std::chrono::microseconds>(t4 - t3).count()
-      << " microsegundos | "
-      << std::chrono::duration_cast<std::chrono::microseconds>(t4 - t3)
-                 .count() /
-             1000.0
-      << " milisegundos | "
-      << std::chrono::duration_cast<std::chrono::microseconds>(t4 - t3)
-                 .count() /
-             1000000.0
-      << " segundos\n";
 }
 
 void times() {
@@ -67,7 +47,7 @@ void times() {
   std::cout << "||||||||||TESTEO MEDIANO|||||||||\n";
   times(100);
   std::cout << "||||||||||TESTEO GRANDE|||||||||\n";
-  times(1000);
+  times(1003);
   std::cout << "||||||||||TESTEO ENORME|||||||||\n";
-  times(32000);
+  times(30000);
 }

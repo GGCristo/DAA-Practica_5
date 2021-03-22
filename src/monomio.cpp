@@ -37,9 +37,13 @@ std::ostream &operator<<(std::ostream &nout, const Monomio &s) {
 }
 // std::istream &operator>>(const std::istream &sin, Monomio &r) {}
 
+Monomio operator*(const Monomio &x, const Monomio &y) {
+  return Monomio(x.getCoeficiente() * y.getCoeficiente(),
+                 x.getExponente() + y.getExponente());
+}
 // Suma dos monomios de mismo exponente
 Monomio operator+(const Monomio &x, const Monomio &y) {
-  assert(x.getExponente() == y.getExponente());
+  // assert(x.getExponente() == y.getExponente());
   return Monomio(x.getCoeficiente() + y.getCoeficiente(), y.getExponente());
 }
 
