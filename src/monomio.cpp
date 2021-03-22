@@ -10,15 +10,15 @@ Monomio::Monomio(int coef, int exp) {
   exponente_ = exp;
 }
 
-int Monomio::Evaluar(int x) const {}
+// int Monomio::Evaluar(int x) const {}
 
 int Monomio::getCoeficiente() const { return coeficiente_; }
 
 int Monomio::getExponente() const { return exponente_; }
 
-void Monomio::setCoeficiente(int c) { coeficiente_ = c; }
+// void Monomio::setCoeficiente(int c) { coeficiente_ = c; }
 
-void Monomio::setExponente(int c) { exponente_ = c; }
+// void Monomio::setExponente(int c) { exponente_ = c; }
 
 bool Monomio::operator<(const Monomio &monomio2) {
   return exponente_ > monomio2.getExponente();
@@ -32,10 +32,16 @@ std::ostream &operator<<(std::ostream &nout, const Monomio &s) {
   }
   return nout;
 }
-std::istream &operator>>(const std::istream &sin, Monomio &r) {}
+// std::istream &operator>>(const std::istream &sin, Monomio &r) {}
 
 // Suma dos monomios de mismo exponente
 Monomio operator+(const Monomio &x, const Monomio &y) {
   assert(x.getExponente() == y.getExponente());
   return Monomio(x.getCoeficiente() + y.getCoeficiente(), y.getExponente());
+}
+
+// Resta dos monomios de mismo exponente
+Monomio operator-(const Monomio &x, const Monomio &y) {
+  assert(x.getExponente() == y.getExponente());
+  return Monomio(x.getCoeficiente() - y.getCoeficiente(), y.getExponente());
 }

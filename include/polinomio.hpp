@@ -28,11 +28,10 @@ class Polinomio {
 
   Polinomio getDerecha() const;
   Polinomio getIzquierda() const;
-  size_t getGrado() const;
   size_t get_sz() const;
-  void insert(Monomio);
   void setMultiplicar();
   Polinomio operator+(const Polinomio&) const;
+  Polinomio operator-(const Polinomio&) const;
   const Monomio& operator[](unsigned int) const;
   const polinomio_t& getPolinomio_t() const;
   Monomio& operator[](unsigned int);

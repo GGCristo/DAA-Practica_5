@@ -3,10 +3,9 @@
 Polinomio MClasico::multiplicacion(const Polinomio& polinomio1,
                                    const Polinomio& polinomio2) {
   polinomio_t resultado;
-  int N = (polinomio1.get_sz() > polinomio2.get_sz() ? polinomio1.get_sz()
-                                                     : polinomio2.get_sz());
-  std::cout << '\n';
-  for (size_t i = 0; i < 2 * N - 2; ++i) {
+  size_t N = (polinomio1.get_sz() > polinomio2.get_sz() ? polinomio1.get_sz()
+                                                        : polinomio2.get_sz());
+  for (size_t i = 0; i <= 2 * N - 2; ++i) {
     int coeficiente = 0;
     int exponente = 0;
     for (size_t j = 0; j <= i; ++j) {
@@ -26,10 +25,12 @@ Polinomio MClasico::multiplicacion(const Polinomio& polinomio1,
   }
   std::cout << '\n';
   */
-  if (N == 1) {
-    resultado.push_back(
-        Monomio(polinomio1[0].getCoeficiente() * polinomio2[0].getCoeficiente(),
-                polinomio1[0].getExponente() + polinomio2[0].getExponente()));
-  }
+  /*
+   if (N == 1) {
+     resultado.push_back(
+         Monomio(polinomio1[0].getCoeficiente() *
+   polinomio2[0].getCoeficiente(), polinomio1[0].getExponente() +
+   polinomio2[0].getExponente()));
+   }*/
   return Polinomio(resultado);
 }

@@ -66,8 +66,33 @@ Polinomio Polinomio::operator+(const Polinomio& polinomioD) const {
   return Polinomio(resultado);
 }
 
-bool mySort(const Monomio& monomio1, const Monomio& monomio2) {
-  return monomio1.getExponente() > monomio2.getExponente();
+Polinomio Polinomio::operator-(const Polinomio& polinomioD) const {
+  std::vector<Monomio> resultado;
+  auto ptr1 = polinomio_.begin();
+  auto ptr2 = polinomioD.getPolinomio_t().begin();
+  while (ptr1 != polinomio_.end() &&
+         ptr2 != polinomioD.getPolinomio_t().end()) {
+    if (ptr1->getExponente() > ptr2->getExponente()) {
+      resultado.push_back(*ptr1);
+      ptr1++;
+    } else if (ptr1->getExponente() == ptr2->getExponente()) {
+      resultado.push_back(*ptr1 - *ptr2);
+      ptr1++;
+      ptr2++;
+    } else {
+      resultado.push_back(*ptr2);
+      ptr2++;
+    }
+  }
+  while (ptr1 != polinomio_.end()) {
+    resultado.push_back(*ptr1);
+    ptr1++;
+  }
+  while (ptr2 != polinomioD.getPolinomio_t().end()) {
+    resultado.push_back(*ptr2);
+    ptr2++;
+  }
+  return Polinomio(resultado);
 }
 
 const Monomio& Polinomio::operator[](unsigned int index) const {
@@ -77,10 +102,6 @@ const Monomio& Polinomio::operator[](unsigned int index) const {
 const polinomio_t& Polinomio::getPolinomio_t() const { return polinomio_; }
 
 Monomio& Polinomio::operator[](unsigned int index) { return polinomio_[index]; }
-
-void Polinomio::insert(Monomio monomio) { polinomio_.push_back(monomio); }
-
-size_t Polinomio::getGrado() const { return grado_; }
 
 size_t Polinomio::get_sz() const { return polinomio_.size(); }
 
