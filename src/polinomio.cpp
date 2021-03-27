@@ -6,12 +6,6 @@
 #include "../include/m_clasico.hpp"
 #include "../include/m_dyv.hpp"
 
-Polinomio::Polinomio(const Polinomio& polinomioD)
-    : polinomio_(polinomioD.polinomio_), multiplicar_(polinomioD.multiplicar_) {
-  grado_ = polinomioD.grado_;
-  terminos_ = polinomioD.terminos_;
-}
-
 Polinomio::Polinomio(std::vector<int> polinomioD,
                      std::shared_ptr<MultiplicacionInterfaz> algoritmo) {
   polinomio_.reserve(polinomioD.size());

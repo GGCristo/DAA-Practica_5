@@ -16,7 +16,6 @@ class Polinomio {
   // Constructores
   // constructor por defecto
   Polinomio() = delete;
-  Polinomio(const Polinomio&);
   // constructor con vector de coeficientes
   explicit Polinomio(
       std::vector<int>,
