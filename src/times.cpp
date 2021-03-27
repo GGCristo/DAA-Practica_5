@@ -49,5 +49,5 @@ void times() {
   std::cout << "||||||||||TESTEO GRANDE|||||||||\n";
   times(1003);
   std::cout << "||||||||||TESTEO ENORME|||||||||\n";
-  times(30000);
+  times(20000);
 }
