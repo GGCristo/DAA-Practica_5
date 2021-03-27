@@ -1,4 +1,10 @@
-steps:
-- uses: reviewdog/action-setup@v1
-  with:
-    reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
+name: Reviewdog
+on: push
+jobs:
+  cppcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: reviewdog/action-setup@v1
+        reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
+        cmd: cppcheck --enable=all --suppress=missingIncludeSystem . -itest/ -ibuild/ -iDebug/ -i.ccls-cache/
+        level: warning
