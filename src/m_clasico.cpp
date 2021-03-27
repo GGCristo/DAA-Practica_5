@@ -6,9 +6,8 @@
 Polinomio MClasico::multiplicacion(const Polinomio& polinomio1,
                                    const Polinomio& polinomio2) {
   polinomio_t resultado;
-  size_t N = (polinomio1.get_sz() > polinomio2.get_sz() ? polinomio1.get_sz()
-                                                        : polinomio2.get_sz());
-  for (size_t i = 0; i <= 2 * N - 2; ++i) {
+  assert(polinomio1.get_sz() == polinomio2.get_sz());
+  for (size_t i = 0; i <= 2 * polinomio1.get_sz() - 2; ++i) {
     int coeficiente = 0;
     int exponente = 0;
     for (size_t j = 0; j <= i; ++j) {

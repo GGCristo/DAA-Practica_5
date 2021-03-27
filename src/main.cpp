@@ -10,7 +10,6 @@
 #include "../include/times.hpp"
 
 int main() {
-  /*
   Polinomio polinomio1(std::vector<int>{-1, 1, 3, 5, 2},
                        std::make_shared<MClasico>());
   Polinomio polinomio2(std::vector<int>{6, 3, 2, 2, 2});
@@ -20,7 +19,6 @@ int main() {
                        std::make_shared<MDyV>());
   Polinomio polinomio4(std::vector<int>{6, 3, 2, 2, 2});
   polinomio3.multiplicar(polinomio4).show();
-*/
-  times();
+  // times();
   return 0;
 }
