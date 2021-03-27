@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: reviewdog/action-setup@v1
-        reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
+        with:
+          reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
+      - name: cppcheck
         cmd: cppcheck --enable=all --suppress=missingIncludeSystem . -itest/ -ibuild/ -iDebug/ -i.ccls-cache/
         level: warning
