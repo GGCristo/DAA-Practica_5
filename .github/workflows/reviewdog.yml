@@ -2,6 +2,7 @@ name: Reviewdog
 on: push
 jobs:
   cppcheck:
+    name: Cppcheck
     runs-on: ubuntu-latest
     steps:
       - uses: reviewdog/action-setup@v1
