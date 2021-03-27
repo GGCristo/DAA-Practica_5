@@ -1,9 +1,4 @@
-name: Reviewdog
-on: push
-
-jobs:
-  cpplint:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - uses: reviewdog/action-cpplint@master
+steps:
+- uses: reviewdog/action-setup@v1
+  with:
+    reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
