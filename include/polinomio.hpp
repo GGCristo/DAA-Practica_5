@@ -37,6 +37,7 @@ class Polinomio {
   const Monomio& operator[](unsigned int) const;
   const polinomio_t& getPolinomio_t() const;
   Monomio& operator[](unsigned int);
+  bool operator==(const Polinomio&);
   std::ostream& show(std::ostream& os = std::cout) const;
 
  private:

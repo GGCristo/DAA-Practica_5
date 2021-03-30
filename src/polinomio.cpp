@@ -102,6 +102,17 @@ const Monomio& Polinomio::operator[](unsigned int index) const {
   return polinomio_[index];
 }
 
+bool Polinomio::operator==(const Polinomio& polinomio) {
+  if (get_sz() != polinomio.get_sz()) return false;
+  for (size_t i = 0; i < get_sz(); ++i) {
+    if (polinomio_[i].getCoeficiente() != polinomio[i].getCoeficiente() ||
+        polinomio_[i].getExponente() != polinomio[i].getExponente()) {
+      return false;
+    }
+  }
+  return true;
+}
+
 const polinomio_t& Polinomio::getPolinomio_t() const { return polinomio_; }
 
 Monomio& Polinomio::operator[](unsigned int index) { return polinomio_[index]; }
